@@ -1,0 +1,22 @@
+---
+title: "homework 3 rmarkdown"
+author: "Sara Guefroudj"
+output: html_document
+---
+[View this project on GitHub](https://github.com/Saraguef123/ENVS-193DS_homework-03)
+
+# Homework set up
+```{r}
+library(tidyverse)
+library(here)
+library(gt)
+```
+
+# Problem 1:
+```{r}
+#testing to see if I am doing this right
+```
+
+
+
+
