@@ -13,9 +13,13 @@ library(gt)
 ```
 
 # Problem 1: Personal data
-##a.) 
+## a.) 
 [I would summarize my data by looking at the mean time I spend on homework for each day of the week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week and this can affect the amount of time I spend on homework each day of the week.]
 
+## b.) Visualization
+```{r}
+
+```
 
 
 
