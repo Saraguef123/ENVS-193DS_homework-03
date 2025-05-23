@@ -77,7 +77,3 @@ decimals = 1)
 personaldata_table # returns table
 ```
       
-
-
-
-
