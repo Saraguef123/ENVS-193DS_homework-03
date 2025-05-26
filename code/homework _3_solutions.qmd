@@ -17,7 +17,46 @@ mydata <- read.csv(here("data", "personal_data.csv"))
 
 # Problem 1: Personal data
 
-## a.) 
-[I would summarize my data by looking at the mean time I spend on homework for each day of the week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week and this can affect the amount of time I spend on homework each day of the week.]
+## a.) Data Summarizing 
+I would summarize my data by looking at the mean time I spend on homework for each day of the week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week and this can affect the amount of time I spend on homework each day of the week.
+
+## b.) Visualization
+```{r}
+mydata$day.of.week <- factor(mydata$day.of.week, #converts day of week to a factor with specific order
+                             levels = c("Monday", "Tuesday", "Wednesday",
+                                        "Thursday", "Friday", "Saturday",
+                                        "Sunday")) 
+
+
+mean_data <- mydata |> #uses my_data frame
+group_by(day.of.week) |> #groups points by day of week
+  summarize(mean_time = mean(Time.spent.on.Schoolwork.min.)) #calculates mean time spent on school work for each day of the week
+  
+ggplot(mydata, #uses mydata frame
+       aes(x = day.of.week, #x-axis should be day of week
+           y = Time.spent.on.Schoolwork.min., #y-axis should be time spent on school work in min
+                   color = day.of.week)) + #coloring geometries by day of week
+  
+  geom_jitter( width =0.1, #adds points
+               height= 0,
+               alpha=0.5)+
+  geom_point(data=mean_data, aes(y=mean_time), shape = 16, size = 3, color = "red")+#adds a mean point for each day
+  scale_color_manual(values = c(
+    "Monday" = "magenta", #changes color of points
+    "Tuesday" = "orange", #changes color of points 
+    "Wednesday" = "gold", #changes color of points
+    "Thursday" = "green", #changes color of points
+    "Friday" = "darkblue",#changes color of points
+    "Saturday"= "black",  #changes color of points
+    "Sunday" = "turquoise"  #changes color of points
+  ))+
+  labs(
+    title = " Average Time Spent on School Work by Day of Week", #adds a title
+    x = "Day of the Week", #changes x-axis title
+    color = "Day of Week", #changes legend title
+    y = "Time spent on School Work(min)" #changes y-axis title
+  )
+
+```
 
 
