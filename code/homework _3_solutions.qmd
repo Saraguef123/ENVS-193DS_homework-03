@@ -59,4 +59,8 @@ ggplot(mydata, #uses mydata frame
 
 ```
 
+## c. Caption
+Average time spent on school work(min) measured each day of the week Sunday-Friday. Open circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.
+
+
 
