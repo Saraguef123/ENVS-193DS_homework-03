@@ -10,4 +10,7 @@ output: html_document
 library(tidyverse)
 library(here)
 library(gt)
-hi
+mydata <- read.csv("data/personal_data.csv")
+```
+
+
