@@ -62,5 +62,21 @@ ggplot(mydata, #uses mydata frame
 ## c. Caption
 Average time spent on school work(min) measured each day of the week Sunday-Friday. Open circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.
 
+## d. Table presentation
+```{r}
+personaldata_table <- mean_data |> # using  mean_data frame
+select(day.of.week,mean_time) |> #uses selected columns
+gt() |> #creates table
+tab_header(
+title = "Summary Statistics of Average Time Spent on school Work by day of week") |>#creates title
+cols_label( # changes columns names
+  day.of.week = "Day of Week",
+mean_time = "Mean(min)") |> # changes column name
+fmt_number( #formats numbers correctly
+columns = where(is.numeric), #rounds each column where a number is to one decimal place.
+decimals = 1)
+personaldata_table # returns table
+
+```
 
 
