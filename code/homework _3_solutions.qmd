@@ -1,7 +1,10 @@
 ---
 title: "ENVS-193DS Homework 3"
 author: "Sara Guefroudj"
-output: html_document
+format:
+  html:
+    toc: true # This line enables the Table of Contents
+    toc-depth: 3 # (Optional) This sets the depth of headings to include (H1, H2, H3)
 ---
 [View this project on GitHub](https://github.com/Saraguef123/ENVS-193DS_homework-03)
 
@@ -79,4 +82,8 @@ personaldata_table # returns table
 
 ```
 
+# Problem 2. Affective visualization
+
+## a.
+I am comparing the mean time spent on school work each day. What an affective visualization could like for this is drawing 7 six hour clocks because that was the highest amount of time I spent on schoolwork throughout the week. I then would draw a hand on the mean amount of hours I spend on each clock and color that region red, With the darkest red being the day with the highest average of time spent on school work and lighest shade of red being the least average time spent on school work
 
