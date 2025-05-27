@@ -102,8 +102,8 @@ This piece is showing showing the average time I spend on homework each day of t
 ## a.  Revisit and summarize
 One of the statistical tests included in this paper is a Kruskal Wallis test. The predictor
 variable was the Location and the response variable was the mp concentration in water
-and sediment samples form the 3 locations in  the river.
+and sediment samples form the 3 locations in the river.
 
-## b.  Revisit and summarize
+
 
 
