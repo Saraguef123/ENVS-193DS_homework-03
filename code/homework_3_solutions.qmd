@@ -1,0 +1,110 @@
+---
+title: "ENVS-193DS Homework 3"
+author: "Sara Guefroudj"
+format:
+  html:
+    toc: true # This line enables the Table of Contents
+    toc-depth: 3 # (Optional) This sets the depth of headings to include (H1, H2, H3)
+---
+[View this project on GitHub](https://github.com/Saraguef123/ENVS-193DS_homework-03)
+
+# Homework set up
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+library(here)
+library(gt)
+mydata <- read.csv(here("data", "personal_data.csv"))
+```
+
+# Problem 1: Personal data
+
+## a.) Data Summarizing 
+I would summarize my data by looking at the mean time I spend on homework for each day of the week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week and this can affect the amount of time I spend on homework each day of the week.
+
+## b.) Visualization
+```{r}
+mydata$day.of.week <- factor(mydata$day.of.week, #converts day of week to a factor with specific order
+                             levels = c("Monday", "Tuesday", "Wednesday",
+                                        "Thursday", "Friday", "Saturday",
+                                        "Sunday")) 
+
+
+mean_data <- mydata |> #uses my_data frame
+group_by(day.of.week) |> #groups points by day of week
+  summarize(mean_time = mean(Time.spent.on.Schoolwork.min.)) #calculates mean time spent on school work for each day of the week
+  
+ggplot(mydata, #uses mydata frame
+       aes(x = day.of.week, #x-axis should be day of week
+           y = Time.spent.on.Schoolwork.min., #y-axis should be time spent on school work in min
+                   color = day.of.week)) + #coloring geometries by day of week
+  
+  geom_jitter( width =0.1, #adds points
+               height= 0,
+               alpha=0.5)+
+  geom_point(data=mean_data, aes(y=mean_time), shape = 16, size = 3, color = "red")+#adds a mean point for each day
+  scale_color_manual(values = c(
+    "Monday" = "magenta", #changes color of points
+    "Tuesday" = "orange", #changes color of points 
+    "Wednesday" = "gold", #changes color of points
+    "Thursday" = "green", #changes color of points
+    "Friday" = "darkblue",#changes color of points
+    "Saturday"= "black",  #changes color of points
+    "Sunday" = "turquoise"  #changes color of points
+  ))+
+  labs(
+    title = " Average Time Spent on School Work by Day of Week", #adds a title
+    x = "Day of the Week", #changes x-axis title
+    color = "Day of Week", #changes legend title
+    y = "Time spent on School Work(min)" #changes y-axis title
+  )
+
+```
+
+## c. Caption
+Average time spent on school work(min) measured each day of the week Sunday-Friday. Open circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.
+
+## d. Table presentation
+```{r}
+personaldata_table <- mean_data |> # using  mean_data frame
+select(day.of.week,mean_time) |> #uses selected columns
+gt() |> #creates table
+tab_header(
+title = "Summary Statistics of Average Time Spent on school Work by day of week") |>#creates title
+cols_label( # changes columns names
+  day.of.week = "Day of Week",
+mean_time = "Mean(min)") |> # changes column name
+fmt_number( #formats numbers correctly
+columns = where(is.numeric), #rounds each column where a number is to one decimal place.
+decimals = 1)
+personaldata_table # returns table
+
+```
+
+# Problem 2. Affective visualization
+
+## a. Describing affective visualization
+I am comparing the mean time spent on school work each day. What an affective visualization could like for this is drawing 7 six hour clocks because that was the highest amount of time I spent on schoolwork throughout the week. I then would draw a hand on the mean amount of hours I spend on each clock and color that region red, With the darkest red being the day with the highest average of time spent on school work and lighest shade of red being the least average time spent on school work
+
+## b.Create a sketch (on paper) of your idea.
+
+![sketch](../media/sketch2.jpg)
+
+## c. 
+![sketch](../media/draft.jpg)
+
+## d.
+This piece is showing showing the average time I spend on homework each day of the week on a 6 hour clock. The shade of red indicates the amount of time where the darkest shade is the highest average compared to the other days of the week. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day.
+
+#Problem 3. Statistical critique
+
+## a.  Revisit and summarize
+One of the statistical tests included in this paper is a Kruskal Wallis test. The predictor
+variable was the Location and the response variable was the mp concentration in water
+and sediment samples form the 3 locations in the river.
+
+## b. Visual Clarity
+
+
+
