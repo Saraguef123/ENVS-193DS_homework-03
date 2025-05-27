@@ -84,6 +84,10 @@ personaldata_table # returns table
 
 # Problem 2. Affective visualization
 
-## a.
+## a. Describing affective visualization
 I am comparing the mean time spent on school work each day. What an affective visualization could like for this is drawing 7 six hour clocks because that was the highest amount of time I spent on schoolwork throughout the week. I then would draw a hand on the mean amount of hours I spend on each clock and color that region red, With the darkest red being the day with the highest average of time spent on school work and lighest shade of red being the least average time spent on school work
+
+## b.Create a sketch (on paper) of your idea.
+
+![sketch](../media/sketch2.jpg)
 
