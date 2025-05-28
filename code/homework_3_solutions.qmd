@@ -1,6 +1,7 @@
 ---
 title: "ENVS-193DS Homework 3"
 author: "Sara Guefroudj"
+date: 5/27/2025
 format:
   html:
     toc: true # This line enables the Table of Contents
@@ -95,7 +96,7 @@ I am comparing the mean time spent on school work each day. What an affective vi
 ![sketch](../media/draft.jpg)
 
 ## d.
-This piece is showing showing the average time I spend on homework each day of the week on a 6 hour clock. The shade of red indicates the amount of time where the darkest shade is the highest average compared to the other days of the week. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day.
+This piece is showing the average time I spend on homework each day of the week on a 6 hour clock. The shade of red indicates the amount of time where the darkest shade is the highest average compared to the other days of the week. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day depending on the averages.
 
 #Problem 3. Statistical critique
 
@@ -106,5 +107,10 @@ and sediment samples form the 3 locations in the river.
 
 ## b. Visual Clarity
 The authors dont privide a figure/table for the specific Kruskal Wallis test above. However one other Kruskal Wallis test the authors run is on the source pond type and how this affects mp concentrations in water and sediment. The response variable is the source pond type being saltwater and a mixture of saltwater and river water. The predictor variable is mp concentration in both water and sediment. The table provided is missing some components to  clearly represent the data underlying the test. It accurately proved the p-value however the ranking(H value) of the Kruskal Wallis test is not provided and this would be important to provide because the main part for a Kruskal Wallis test is comparing the ranks between groups and a H value would tell us the magnitude of the difference between groups.
+
+## c. Aesthetic clarty
+the authors could have included in the table some horizontal lines seprating the different groups of water and sediment. This would make it more organized and less clutered. In addition he could have organized the data and have a column named Kruskal Wallis instead of repeating it twice for each group. Lastly, having column names for the sample types would look more organized than having a long title explaning the different samples in parenthesis.
+
+
 
 
