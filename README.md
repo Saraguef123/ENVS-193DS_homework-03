@@ -2,7 +2,7 @@
 
 ## **General Information**
 **Description:**
-This repository contains my homework 3 solutions for ENVS-193DS course including a personal data visualization and a statistical critique.
+This repository contains my homework 3 solutions for ENVS-193DS course including a personal data visualization for the mean time I spend on schoolwork each day of the week and a statistical critique.
 
 Author: Sara Guefroudj
 
