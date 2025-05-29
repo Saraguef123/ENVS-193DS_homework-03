@@ -65,7 +65,7 @@ ggplot(mydata, #uses mydata frame
 ```
 
 ## c. Caption
-Figure 1: Average time spent on school work(min) measured each day of the week Sunday-Friday.Small circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.
+Figure 1: Average time spent on school work(min) measured each day of the week Sunday-Friday.Small circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each week day.
 
 ## d. Table presentation
 ```{r}
