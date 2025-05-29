@@ -7,7 +7,7 @@ This repository contains my homework 3 solutions for ENVS-193DS course including
 Author: Sara Guefroudj
 
 
-## **Data and file Overview** 
+## **Data and file Information** 
 There are three folders, a code folder, a data folder, and a media folder. All code is in the code folder, and all data sets are in the data folder. All media and images are stored in the media folder.
 
 ReadME.md: broad overview 
