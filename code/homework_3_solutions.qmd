@@ -22,7 +22,7 @@ mydata <- read.csv(here("data", "personal_data.csv"))
 # Problem 1: Personal data
 
 ## a.) Data Summarizing 
-I would summarize my data by looking at the mean time I spend on homework for each day of the week. The response variable is the time spent on school work and the predictor variable is day of week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week more than others and this can affect the amount of time I spend on homework each day of the week.
+I would summarize my data by looking at the mean time I spend on school work for each day of the week. The response variable is the time spent on school work and the predictor variable is day of week. Comparing the mean between these groups is informative because I could be outside more  on some days of the week more than others and this can affect the amount of time I spend on school work each day of the week.
 
 ## b.) Visualization
 ```{r}
