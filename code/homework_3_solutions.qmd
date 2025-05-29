@@ -107,7 +107,7 @@ One of the statistical tests included in this paper is a Kruskal Wallis test. Th
 variable was the Location and the response variable was the mp concentration in water
 and sediment samples form the 3 locations in the river. No table or figure was provided for this specific test however a description of the results is provided.
 
-![Table](../media/Original.png)
+![](../media/Original.png)
 
 ## b. Visual Clarity
 
