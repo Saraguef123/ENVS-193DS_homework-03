@@ -110,7 +110,6 @@ and sediment samples form the 3 locations in the river. No table or figure was p
 ![](../media/Original.png)
 
 ## b. Visual Clarity
-
 ![](../media/Table.png)
 
 The authors don't provide a figure/table for the specific Kruskal Wallis test above. However one other Kruskal Wallis test the authors run  is on the source pond type and how this affects mp concentrations in water and sediment. The predictor variable is the source pond type being saltwater and a mixture of saltwater and river water. The response variable is mp concentration in both water and sediment. The table provided is missing some components to  clearly represent the data underlying the test. It accurately provides the p-value however the ranking(H value) of the Kruskal Wallis test is not provided and this would be important to provide because the main part for a Kruskal Wallis test is comparing the ranks between groups and a H value would tell us the magnitude of the difference between groups.
