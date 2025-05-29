@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sara Guefroudj">
+<meta name="dcterms.date" content="2025-05-28">
 
 <title>ENVS-193DS Homework 3</title>
 <style>
@@ -94,8 +95,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#b.create-a-sketch-on-paper-of-your-idea." id="toc-b.create-a-sketch-on-paper-of-your-idea." class="nav-link" data-scroll-target="#b.create-a-sketch-on-paper-of-your-idea.">b.Create a sketch (on paper) of your idea.</a></li>
   <li><a href="#c." id="toc-c." class="nav-link" data-scroll-target="#c.">c.&nbsp;</a></li>
   <li><a href="#d." id="toc-d." class="nav-link" data-scroll-target="#d.">d.</a></li>
+  </ul></li>
+  <li><a href="#problem-3.-statistical-critique" id="toc-problem-3.-statistical-critique" class="nav-link" data-scroll-target="#problem-3.-statistical-critique">Problem 3. Statistical critique</a>
+  <ul class="collapse">
   <li><a href="#a.-revisit-and-summarize" id="toc-a.-revisit-and-summarize" class="nav-link" data-scroll-target="#a.-revisit-and-summarize">a. Revisit and summarize</a></li>
   <li><a href="#b.-visual-clarity" id="toc-b.-visual-clarity" class="nav-link" data-scroll-target="#b.-visual-clarity">b. Visual Clarity</a></li>
+  <li><a href="#c.-aesthetic-clarity" id="toc-c.-aesthetic-clarity" class="nav-link" data-scroll-target="#c.-aesthetic-clarity">c.&nbsp;Aesthetic clarity</a></li>
+  <li><a href="#d.-recommendations" id="toc-d.-recommendations" class="nav-link" data-scroll-target="#d.-recommendations">d.&nbsp;Recommendations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -118,6 +124,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 28, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -127,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a href="https://github.com/Saraguef123/ENVS-193DS_homework-03">View this project on GitHub</a></p>
+<p><a href="https://github.com/Saraguef123/ENVS-193DS_homework-03">View this Github Repo</a></p>
 <section id="homework-set-up" class="level1">
 <h1>Homework set up</h1>
 <div class="cell">
@@ -141,12 +153,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Problem 1: Personal data</h1>
 <section id="a.-data-summarizing" class="level2">
 <h2 class="anchored" data-anchor-id="a.-data-summarizing">a.) Data Summarizing</h2>
-<p>I would summarize my data by looking at the mean time I spend on homework for each day of the week. Comparing the mean between these groups is informative because I could be outside more on some days of the week and this can affect the amount of time I spend on homework each day of the week.</p>
+<p>I would summarize my data by looking at the mean time I spend on homework for each day of the week. The response variable is the time spent on school work and the predictor variable is day of week. Comparing the mean between these groups is informative because I could be outside more on some days of the week more than others and this can affect the amount of time I spend on homework each day of the week.</p>
 </section>
 <section id="b.-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="b.-visualization">b.) Visualization</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>day.of.week <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>day.of.week, <span class="co">#converts day of week to a factor with specific order</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>day.of.week <span class="ot">&lt;-</span>  <span class="fu">factor</span>(mydata<span class="sc">$</span>day.of.week, <span class="co">#converts day of week to a factor with specific order</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                             <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Monday"</span>, <span class="st">"Tuesday"</span>, <span class="st">"Wednesday"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"Thursday"</span>, <span class="st">"Friday"</span>, <span class="st">"Saturday"</span>,</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">"Sunday"</span>)) </span>
@@ -163,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>( <span class="at">width =</span><span class="fl">0.1</span>, <span class="co">#adds points</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">height=</span> <span class="dv">0</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.5</span>)<span class="sc">+</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha=</span><span class="fl">0.5</span>)<span class="sc">+</span> <span class="co"># points 50% transparent</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>mean_data, <span class="fu">aes</span>(<span class="at">y=</span>mean_time), <span class="at">shape =</span> <span class="dv">16</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"red"</span>)<span class="sc">+</span><span class="co">#adds a mean point for each day</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Monday"</span> <span class="ot">=</span> <span class="st">"magenta"</span>, <span class="co">#changes color of points</span></span>
@@ -178,8 +190,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">" Average Time Spent on School Work by Day of Week"</span>, <span class="co">#adds a title</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Day of the Week"</span>, <span class="co">#changes x-axis title</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Day of Week"</span>, <span class="co">#changes legend title</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Time spent on School Work(min)"</span> <span class="co">#changes y-axis title</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Time spent on School Work(min)"</span>, <span class="co">#changes y-axis title</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Figure 1"</span>) <span class="sc">+</span><span class="co">#adds a caption </span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="co">#changing theme of plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -191,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="c.-caption" class="level2">
 <h2 class="anchored" data-anchor-id="c.-caption">c.&nbsp;Caption</h2>
-<p>Average time spent on school work(min) measured each day of the week Sunday-Friday. Open circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.</p>
+<p>Figure 1: Average time spent on school work(min) measured each day of the week Sunday-Friday.Small circles represent the individual observations for time spent on school work each day. The red point represents the mean time spent on school work for each day.</p>
 </section>
 <section id="d.-table-presentation" class="level2">
 <h2 class="anchored" data-anchor-id="d.-table-presentation">d.&nbsp;Table presentation</h2>
@@ -200,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(day.of.week,mean_time) <span class="sc">|&gt;</span> <span class="co">#uses selected columns</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>() <span class="sc">|&gt;</span> <span class="co">#creates table</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_header</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"Summary Statistics of Average Time Spent on school Work by day of week"</span>) <span class="sc">|&gt;</span><span class="co">#creates title</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"Summary Statistics on Average Time Spent on School Work by day of week"</span>) <span class="sc">|&gt;</span><span class="co">#creates title</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cols_label</span>( <span class="co"># changes columns names</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">day.of.week =</span> <span class="st">"Day of Week"</span>,</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">mean_time =</span> <span class="st">"Mean(min)"</span>) <span class="sc">|&gt;</span> <span class="co"># changes column name</span></span>
@@ -209,23 +222,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">decimals =</span> <span class="dv">1</span>)</span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>personaldata_table <span class="co"># returns table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="kicpmygexk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kicpmygexk table {
+<div id="dnujvgpzgb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dnujvgpzgb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kicpmygexk thead, #kicpmygexk tbody, #kicpmygexk tfoot, #kicpmygexk tr, #kicpmygexk td, #kicpmygexk th {
+#dnujvgpzgb thead, #dnujvgpzgb tbody, #dnujvgpzgb tfoot, #dnujvgpzgb tr, #dnujvgpzgb td, #dnujvgpzgb th {
   border-style: none;
 }
 
-#kicpmygexk p {
+#dnujvgpzgb p {
   margin: 0;
   padding: 0;
 }
 
-#kicpmygexk .gt_table {
+#dnujvgpzgb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -251,12 +264,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_caption {
+#dnujvgpzgb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kicpmygexk .gt_title {
+#dnujvgpzgb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -268,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#kicpmygexk .gt_subtitle {
+#dnujvgpzgb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -280,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#kicpmygexk .gt_heading {
+#dnujvgpzgb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -292,13 +305,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_bottom_border {
+#dnujvgpzgb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_col_headings {
+#dnujvgpzgb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -313,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_col_heading {
+#dnujvgpzgb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -333,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#kicpmygexk .gt_column_spanner_outer {
+#dnujvgpzgb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -345,15 +358,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#kicpmygexk .gt_column_spanner_outer:first-child {
+#dnujvgpzgb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kicpmygexk .gt_column_spanner_outer:last-child {
+#dnujvgpzgb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kicpmygexk .gt_column_spanner {
+#dnujvgpzgb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -365,11 +378,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#kicpmygexk .gt_spanner_row {
+#dnujvgpzgb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kicpmygexk .gt_group_heading {
+#dnujvgpzgb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -395,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#kicpmygexk .gt_empty_group_heading {
+#dnujvgpzgb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -410,15 +423,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#kicpmygexk .gt_from_md > :first-child {
+#dnujvgpzgb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kicpmygexk .gt_from_md > :last-child {
+#dnujvgpzgb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kicpmygexk .gt_row {
+#dnujvgpzgb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -437,7 +450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#kicpmygexk .gt_stub {
+#dnujvgpzgb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -450,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kicpmygexk .gt_stub_row_group {
+#dnujvgpzgb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -464,15 +477,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#kicpmygexk .gt_row_group_first td {
+#dnujvgpzgb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kicpmygexk .gt_row_group_first th {
+#dnujvgpzgb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kicpmygexk .gt_summary_row {
+#dnujvgpzgb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -482,16 +495,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kicpmygexk .gt_first_summary_row {
+#dnujvgpzgb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_first_summary_row.thick {
+#dnujvgpzgb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kicpmygexk .gt_last_summary_row {
+#dnujvgpzgb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -501,7 +514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_grand_summary_row {
+#dnujvgpzgb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -511,7 +524,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kicpmygexk .gt_first_grand_summary_row {
+#dnujvgpzgb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -521,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_last_grand_summary_row_top {
+#dnujvgpzgb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -531,11 +544,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_striped {
+#dnujvgpzgb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kicpmygexk .gt_table_body {
+#dnujvgpzgb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -544,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_footnotes {
+#dnujvgpzgb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -558,7 +571,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_footnote {
+#dnujvgpzgb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -567,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kicpmygexk .gt_sourcenotes {
+#dnujvgpzgb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -581,7 +594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#kicpmygexk .gt_sourcenote {
+#dnujvgpzgb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -589,72 +602,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#kicpmygexk .gt_left {
+#dnujvgpzgb .gt_left {
   text-align: left;
 }
 
-#kicpmygexk .gt_center {
+#dnujvgpzgb .gt_center {
   text-align: center;
 }
 
-#kicpmygexk .gt_right {
+#dnujvgpzgb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kicpmygexk .gt_font_normal {
+#dnujvgpzgb .gt_font_normal {
   font-weight: normal;
 }
 
-#kicpmygexk .gt_font_bold {
+#dnujvgpzgb .gt_font_bold {
   font-weight: bold;
 }
 
-#kicpmygexk .gt_font_italic {
+#dnujvgpzgb .gt_font_italic {
   font-style: italic;
 }
 
-#kicpmygexk .gt_super {
+#dnujvgpzgb .gt_super {
   font-size: 65%;
 }
 
-#kicpmygexk .gt_footnote_marks {
+#dnujvgpzgb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kicpmygexk .gt_asterisk {
+#dnujvgpzgb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kicpmygexk .gt_indent_1 {
+#dnujvgpzgb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kicpmygexk .gt_indent_2 {
+#dnujvgpzgb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kicpmygexk .gt_indent_3 {
+#dnujvgpzgb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kicpmygexk .gt_indent_4 {
+#dnujvgpzgb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kicpmygexk .gt_indent_5 {
+#dnujvgpzgb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kicpmygexk .katex-display {
+#dnujvgpzgb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kicpmygexk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dnujvgpzgb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -662,7 +675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_heading">
-<th colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border">Summary Statistics of Average Time Spent on school Work by day of week</th>
+<th colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border">Summary Statistics on Average Time Spent on School Work by day of week</th>
 </tr>
 <tr class="odd gt_col_headings">
 <th id="day.of.week" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Day of Week</th>
@@ -710,13 +723,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Problem 2. Affective visualization</h1>
 <section id="a.-describing-affective-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="a.-describing-affective-visualization">a. Describing affective visualization</h2>
-<p>I am comparing the mean time spent on school work each day. What an affective visualization could like for this is drawing 7 six hour clocks because that was the highest amount of time I spent on schoolwork throughout the week. I then would draw a hand on the mean amount of hours I spend on each clock and color that region red, With the darkest red being the day with the highest average of time spent on school work and lighest shade of red being the least average time spent on school work</p>
+<p>I am comparing the mean time spent on school work each day. What an affective visualization could like for this is drawing 7 circles representing the mean time spent on school. I then would label each circle by day of week. I then would color in each circle red, With the darkest shade being the day with the highest average of time spent on school work and lightest shade of red being the smallest average time spent on school work</p>
 </section>
 <section id="b.create-a-sketch-on-paper-of-your-idea." class="level2">
 <h2 class="anchored" data-anchor-id="b.create-a-sketch-on-paper-of-your-idea.">b.Create a sketch (on paper) of your idea.</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../media/sketch2.jpg" class="img-fluid figure-img"></p>
+<p><img src="../media/sketch1.jpg" class="img-fluid figure-img"></p>
 <figcaption>sketch</figcaption>
 </figure>
 </div>
@@ -725,22 +738,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="c.">c.&nbsp;</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../media/draft.jpg" class="img-fluid figure-img"></p>
+<p><img src="../media/draft1.jpg" class="img-fluid figure-img"></p>
 <figcaption>sketch</figcaption>
 </figure>
 </div>
 </section>
 <section id="d." class="level2">
 <h2 class="anchored" data-anchor-id="d.">d.</h2>
-<p>This piece is showing showing the average time I spend on homework each day of the week on a 6 hour clock. The shade of red indicates the amount of time where the darkest shade is the highest average compared to the other days of the week. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day.</p>
-<p>#Problem 3. Statistical critique</p>
+<p>This piece is showing the average time I spend on school work each day of the week represented in circular shapes. Each circle represents the mean time spent on school work for that day of the week. The shade of red indicates the average amount of time where the darkest shade is the highest average compared to the other days of the week. The lightest shade of red represent the lowest average. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day depending on the averages.</p>
 </section>
+</section>
+<section id="problem-3.-statistical-critique" class="level1">
+<h1>Problem 3. Statistical critique</h1>
 <section id="a.-revisit-and-summarize" class="level2">
 <h2 class="anchored" data-anchor-id="a.-revisit-and-summarize">a. Revisit and summarize</h2>
-<p>One of the statistical tests included in this paper is a Kruskal Wallis test. The predictor variable was the Location and the response variable was the mp concentration in water and sediment samples form the 3 locations in the river.</p>
+<p>One of the statistical tests included in this paper is a Kruskal Wallis test. The predictor variable was the Location and the response variable was the mp concentration in water and sediment samples form the 3 locations in the river. No table or figure was provided for this specific test however a description of the results is provided.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../media/Original.png" class="img-fluid figure-img"></p>
+<figcaption>Table</figcaption>
+</figure>
+</div>
 </section>
 <section id="b.-visual-clarity" class="level2">
 <h2 class="anchored" data-anchor-id="b.-visual-clarity">b. Visual Clarity</h2>
+<p><img src="../media/Table.png" class="img-fluid" alt="Table"> The authors don’t provide a figure/table for the specific Kruskal Wallis test above. However one other Kruskal Wallis test the authors run is on the source pond type and how this affects mp concentrations in water and sediment. The predictor variable is the source pond type being saltwater and a mixture of saltwater and river water. The response variable is mp concentration in both water and sediment. The table provided is missing some components to clearly represent the data underlying the test. It accurately provides the p-value however the ranking(H value) of the Kruskal Wallis test is not provided and this would be important to provide because the main part for a Kruskal Wallis test is comparing the ranks between groups and a H value would tell us the magnitude of the difference between groups.</p>
+</section>
+<section id="c.-aesthetic-clarity" class="level2">
+<h2 class="anchored" data-anchor-id="c.-aesthetic-clarity">c.&nbsp;Aesthetic clarity</h2>
+<p>The authors could have included in the table some horizontal lines separating the different groups of water and sediment. This would make it more organized and less cluttered. In addition they could have organized the data and have a column named Kruskal Wallis instead of repeating it twice for each group. Lastly, having column names for the sample types would look more organized than having a long title explaining the different samples in parenthesis.</p>
+</section>
+<section id="d.-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="d.-recommendations">d.&nbsp;Recommendations</h2>
+<p>Some recommendations I have for the table would be to organize and format it more neatly. For example having the Kruskal Wallis test mentioned not twice in the table but rather a column name. I would also recommend to add more than just the p-value from the test. Since the author is running a Kruskal Wallis test, they should add the H value or the result from the test to the data. In addition the degrees of freedom should be mentioned because we want to know how many groups were compared statistically speaking instead of saying which groups were being compared in the long description.</p>
 </section>
 </section>
 

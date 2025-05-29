@@ -1,11 +1,11 @@
 ---
 title: "ENVS-193DS Homework 3"
 author: "Sara Guefroudj"
-date: 5/27/2025
+date: 5/28/2025
 format:
   html:
     toc: true # This line enables the Table of Contents
-    toc-depth: 3 # (Optional) This sets the depth of headings to include (H1, H2, H3)
+    toc-depth: 3 
 ---
 [View this Github Repo](https://github.com/Saraguef123/ENVS-193DS_homework-03)
 
@@ -99,7 +99,8 @@ I am comparing the mean time spent on school work each day. What an affective vi
 ## d.
 This piece is showing the average time I spend on school work each day of the week represented in circular shapes. Each circle represents the mean time spent on school work for that day of the week. The shade of red indicates the average amount of time where the darkest shade is the highest average compared to the other days of the week. The lightest shade of red represent the lowest average. I got inspiration from the environmental graphiti gallery website.(https://www.environmentalgraphiti.org/series-folder) by looking at the different ways data can be visualized. This piece was created using the notability app and utilizing the tools they have. The process for this piece took a couple of days. I took a day trying to think of ideas and sketches. The last day was for drawing this piece and making sure the shade of red was different for each day depending on the averages.
 
-#Problem 3. Statistical critique
+
+# Problem 3. Statistical critique
 
 ## a.  Revisit and summarize
 One of the statistical tests included in this paper is a Kruskal Wallis test. The predictor
@@ -111,12 +112,12 @@ and sediment samples form the 3 locations in the river. No table or figure was p
 ## b. Visual Clarity
 
 ![Table](../media/Table.png)
-The authors don't provide a figure/table for the specific Kruskal Wallis test above. However one other Kruskal Wallis test the authors run is on the source pond type and how this affects mp concentrations in water and sediment. The response variable is the source pond type being saltwater and a mixture of saltwater and river water. The predictor variable is mp concentration in both water and sediment. The table provided is missing some components to  clearly represent the data underlying the test. It accurately provides the p-value however the ranking(H value) of the Kruskal Wallis test is not provided and this would be important to provide because the main part for a Kruskal Wallis test is comparing the ranks between groups and a H value would tell us the magnitude of the difference between groups.
+The authors don't provide a figure/table for the specific Kruskal Wallis test above. However one other Kruskal Wallis test the authors run  is on the source pond type and how this affects mp concentrations in water and sediment. The predictor variable is the source pond type being saltwater and a mixture of saltwater and river water. The response variable is mp concentration in both water and sediment. The table provided is missing some components to  clearly represent the data underlying the test. It accurately provides the p-value however the ranking(H value) of the Kruskal Wallis test is not provided and this would be important to provide because the main part for a Kruskal Wallis test is comparing the ranks between groups and a H value would tell us the magnitude of the difference between groups.
 
 
 ## c. Aesthetic clarity
-the authors could have included in the table some horizontal lines seprating the different groups of water and sediment. This would make it more organized and less cluttered. In addition he could have organized the data and have a column named Kruskal Wallis instead of repeating it twice for each group. Lastly, having column names for the sample types would look more organized than having a long title explaining the different samples in parenthesis.
+The authors could have included in the table some horizontal lines separating the different groups of water and sediment. This would make it more organized and less cluttered. In addition they could have organized the data and have a column named Kruskal Wallis instead of repeating it twice for each group. Lastly, having column names for the sample types would look more organized than having a long title explaining the different samples in parenthesis.
 
 
-## c. Recommendations
-Some recommendations I have for the table would be to organize and format more neatly the table. For example having the Kruskal Wallis test mentioned not twice in the table. I would also recommend to add more than just the p-value from the test. Since the author is running a Kruskal Wallis test, they should add the H value or the result from the test to the data. In addition the degrees of freedom should be mentioned because we want to know how many groups were compared statistically speaking instead of saying which groups were being compared in the long description.
+## d. Recommendations
+Some recommendations I have for the table would be to organize and format it more neatly. For example having the Kruskal Wallis test mentioned not twice in the table but rather a column name. I would also recommend to add more than just the p-value from the test. Since the author is running a Kruskal Wallis test, they should add the H value or the result from the test to the data. In addition the degrees of freedom should be mentioned because we want to know how many groups were compared statistically speaking instead of saying which groups were being compared in the long description.
